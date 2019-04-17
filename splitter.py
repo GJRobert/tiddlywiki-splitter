@@ -2,6 +2,9 @@
 from sgmllib import SGMLParser
 
 import codecs
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 class WikiParser(SGMLParser):
     """Parses a TiddlyWiki into individual tiddlers."""
