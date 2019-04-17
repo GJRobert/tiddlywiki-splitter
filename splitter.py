@@ -3,6 +3,7 @@ from sgmllib import SGMLParser
 
 import codecs
 import sys
+import re
 reload(sys)
 sys.setdefaultencoding('utf8')
 
