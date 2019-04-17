@@ -53,7 +53,7 @@ def main():
         os.makedirs(opts.dest)
 
     for t in parser.tiddlers:
-        title_fixed = re.sub("[/><]", "", t["title"]) # 從 title 中去除 / > < 等字元，給下一行用
+        title_fixed = re.sub("[/><]", "", t["title"]) # Remove "/ > <" characters from title, for use in the next line
         fname = P.join(opts.dest, title_fixed) + ".txt"
         fout = codecs.open(fname, "w", "utf-8")
         title, text, tags = t["title"], t["text"], t["tags"]
